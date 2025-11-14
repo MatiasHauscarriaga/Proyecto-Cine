@@ -12,12 +12,10 @@
 </head>
 <body class="bg-[url(images/pochoclos.png)] bg-fixed bg-repeat-round "> 
     <?php if(isset($_GET['success'])): ?>
-        <div id="toast" class="fixed top-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow-lg opacity-0 transition-opacity duration-500">
-            Usuario creado correctamente!
-        </div>
+        <div id="toast" class="fixed top-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow-lg opacity-0 transition-opacity duration-500">Usuario creado correctamente!</div>
         <script>
             const toast = document.getElementById('toast');
-            toast.classList.remove('opacity-0'); // Aparece
+            toast.classList.remove('opacity-0'); 
             toast.classList.add('opacity-100');
 
             setTimeout(() => {

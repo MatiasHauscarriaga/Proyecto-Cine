@@ -1,5 +1,4 @@
 <?php
-ob_start();
 session_start();
 require_once "../BD/database.php";
 require_once "../Clases/Usuario.php";
@@ -57,5 +56,4 @@ try {
     die("Error en la base de datos: " . $e->getMessage());
 }
 
-ob_end_flush();
 ?>

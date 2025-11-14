@@ -1,8 +1,7 @@
 <?php
-//visualizar perfil.
 session_start();
 require_once "../BD/database.php";
-//var_dump($_SESSION['id']);
+
 
 $db = (new Database())->connect();
 $stmt = $db->prepare("SELECT * FROM usuario WHERE idUsuario = ?");

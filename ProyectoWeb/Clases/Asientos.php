@@ -1,23 +1,17 @@
 <?php
     require_once "../BD/database.php";
-    class Pelicula{
+    class Asientos{
         protected $db;
         public function __construct() {
         $this->db = (new Database())->connect();
         }
 
         public function getAll() {
-        $sql = "SELECT * FROM pelicula";
+        $sql = "SELECT * FROM asiento";
         $stmt = $this->db->query($sql);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
-
-        public function getById($id) {
-        $sql = "SELECT * FROM pelicula WHERE idPelicula = ?";
-        $stmt = $this->db->prepare($sql);
-        $stmt->execute([$id]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-        }   
     }
+
 
 ?>

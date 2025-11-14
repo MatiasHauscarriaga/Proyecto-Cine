@@ -41,7 +41,10 @@ $pelis = $pelicula->getAll();
             <div class="p-4">
                 <h2 class="text-xl text-red-500 font-bold mb-2"><?= $p['namePelicula'] ?></h2>
                 <p class="text-white text-sm mb-4"><?= $p['genero'] ?></p>
-                <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition">Reservar</button>
+                <form action="../Grilla-reservas/grilla.php" method="post">
+                    <input type="hidden" name="idPelicula" value="<?=$p['idPelicula']?>">
+                    <a href="../Grilla-reservas/grilla.php"><button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition">Reservar</button></a>
+                </form>
             </div>
         </div>  
        <?php endforeach; ?> 
